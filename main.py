@@ -3,11 +3,13 @@ import requests
 #from Pillow-PIL import ImageTk, Image
 #import Pillow as PP
 
+#Required Weather Key Token
+weather_key = input("Weather Key Token ")
+
 def test_function(entry):
     print("This is the entry!", entry)
 
 def get_weather(city):
-    weather_key = "efb71c4aff8eff9a2b5dfb3022e5e7b8"
     url = "https://api.openweathermap.org/data/2.5/weather"
     params = {"APPID": weather_key, "q": city, "units": "imperial"}
     response = requests.get(url, params = params)
